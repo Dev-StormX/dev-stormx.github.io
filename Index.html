@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+
+<h2>🔒 للوصول إلى الرابط</h2>
+<p>يجب مشاهدة الإعلان أولاً</p>
+
+<button onclick="start()">📺 مشاهدة الإعلان</button>
+
+<script>
+const tg = window.Telegram.WebApp;
+tg.expand();
+
+// 🔗 ضع رابطك هنا
+const TARGET_URL = "https://example.com";
+
+function start() {
+
+  show_10802708().then(() => {
+    // ✅ بعد مشاهدة الإعلان
+    tg.openLink(TARGET_URL);
+
+  }).catch(() => {
+    alert("يجب مشاهدة الإعلان أولاً");
+  });
+
+}
+</script>
+
+</body>
+</html>
